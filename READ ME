@@ -1,0 +1,52 @@
+ASSIGNMENT 3
+This program is designed to manage data from various devices located in different rooms. Each device has a specific range of valid readings. The program organizes and validates readings using several functions, ensuring that each reading stays within the designated range for its device. The main functionalities are as follows:
+
+We need 6 functions for this:
+-init_device
+This function initializes a device with its name, maximum, and minimum reading values.
+-How it works:
+It uses strncpy to copy the name into the device structure, ensuring the name is null-terminated. Then, it assigns the minimum and maximum values directly to the corresponding fields in the device structure.
+
+Returns: Error code indicating success or failure of the initialization.
+-init_reading
+This function creates a reading associated with a specific device, assigning it a room and a value.
+-How it works:
+First, it checks that all inputs are valid. Then, it calls valid_device_reading to ensure the reading’s value is within the device’s specified range. If valid, it stores the device, value, and room name in the Reading structure.
+
+Returns: Error code indicating whether the initialization succeeded or failed due to an invalid value.
+-valid_device_reading
+This function checks if a reading value is within the allowed range for the specified device.
+-How it works:
+It compares the reading value to the device’s minimum and maximum. If it falls within the range, the function returns a success code; otherwise, it returns an error indicating the value is out of bounds.
+
+Returns: Error code based on the validation outcome.
+-init_reading_collection
+This function sets up a ReadingCollection structure to hold multiple readings.
+-How it works:
+It simply initializes the size of the collection to zero, preparing it to store readings.
+
+Returns: Error code indicating success or failure.
+-add_reading
+This function adds a reading to the ReadingCollection, maintaining lexicographical order by room name.
+-How it works:
+It checks if there is space available in the collection. If so, it shifts existing readings to make room for the new one while preserving alphabetical order. The new reading is then inserted at the correct position.
+
+Returns: Error code indicating success, or a max capacity error if the collection is full.
+-print_reading_collection
+This function displays all readings in the ReadingCollection.
+-How it works:
+It iterates through each reading, calling print_reading to output each one in the collection.
+
+Returns: Error code indicating the success of the printing operation.
+-Optional Side Quest Function
+remove_duplicates
+This function removes duplicate readings from the collection based on device and room name.
+-How it works:
+It uses a unique index counter to track unique entries as it iterates over the collection. Duplicates are removed in-place, reducing the collection’s size.
+
+Returns: Error code indicating whether duplicates were successfully removed.
+Compilation and Execution
+To compile the program, use the following command in a Linux terminal:
+gcc -o device_manager main.c readings.c
+After compiling the program, you can run it with the command:
+./device_manager
