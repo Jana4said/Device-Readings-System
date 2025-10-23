@@ -1,11 +1,11 @@
-# 🔧 Device Readings System (C Project)
+# Device Readings System (C Project)
 
 This project simulates a **sensor data collection system** written in the C programming language.  
 It models multiple devices, validates their readings, stores them in structured collections, and provides tools for error handling and duplicate removal.
 
 ---
 
-## ⚙️ Features
+## Features
 - Structured design using multiple `struct` types  
 - Validation of readings based on device range  
 - Sorted insertion of readings into a collection  
@@ -14,7 +14,7 @@ It models multiple devices, validates their readings, stores them in structured 
 
 ---
 
-## 📁 File Overview
+## File Overview
 | File | Description |
 |------|--------------|
 | **readings.c** | Implements all major logic for handling devices, readings, and validation |
@@ -24,7 +24,7 @@ It models multiple devices, validates their readings, stores them in structured 
 
 ---
 
-## 🧠 Concepts Practiced
+## Concepts Practiced
 - **Structures (`struct`)**
 - **Pointer handling**
 - **Validation and error codes**
@@ -33,21 +33,19 @@ It models multiple devices, validates their readings, stores them in structured 
 
 ---
 
-## 🧰 Technologies Used
+## Technologies Used
 - **C Language**
 - **Standard I/O (`stdio.h`)**
 - **String manipulation (`string.h`)**
 
 ---
-
-## 🧑‍💻 Author
 **Gana Said**  
 Bachelor of Computer Science (AI Stream) – Carleton University  
 📧 [janasaid@cmail.carleton.ca](mailto:janasaid@cmail.carleton.ca)
 
 ---
 
-## 🧩 How to Run
+##  How to Run
 1. Compile the program:
    ```bash
    gcc main.c readings.c -o readings_system
